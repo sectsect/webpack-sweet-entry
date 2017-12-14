@@ -1,6 +1,6 @@
 {
   "name": "webpack-sweet-entry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dynamic entry points / Partial files / Keep Directory Structure for webpack",
   "main": "index.js",
   "scripts": {
