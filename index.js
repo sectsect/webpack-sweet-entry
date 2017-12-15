@@ -19,9 +19,9 @@ function dropUnderscoreFiles(obj) {
 }
 
 function toObject(paths, ext, parentdir) {
-  const glob = glob.sync(paths);
+  const globpaths = glob.sync(paths);
   const ret = {};
-  glob.forEach((path) => {
+  globpaths.forEach((path) => {
     const key = splitString(path, `/${parentdir}/`).slice(-1)[0].replace(`.${ext}`, '');
     ret[key] = path;
   });
