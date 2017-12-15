@@ -15,7 +15,6 @@ npm i webpack-sweet-entry --save-dev
 ```js
 const webpack = require('webpack');
 const path = require('path');
-const glob = require('glob');
 const WebpackSweetEntry = require('webpack-sweet-entry');
 
 const sourcePath = path.join(__dirname, 'src');
@@ -23,7 +22,7 @@ const buildPath = path.join(__dirname, 'dist');
 
 module.exports = [
   {
-    entry: WebpackSweetEntry(glob.sync(path.resolve(sourcePath, 'assets/js/**/*.js*')), 'js', 'js'),
+    entry: WebpackSweetEntry(path.resolve(sourcePath, 'assets/js/**/*.js*'), 'js', 'js'),
     output: {
       path: path.resolve(buildPath, 'assets/js'),
       filename: '[name].js',
@@ -33,7 +32,7 @@ module.exports = [
     }
   },
   {
-    entry: WebpackSweetEntry(glob.sync(path.resolve(sourcePath, 'assets/css/**/*.css*')), 'css', 'css'),
+    entry: WebpackSweetEntry(path.resolve(sourcePath, 'assets/css/**/*.css*'), 'css', 'css'),
     output: {
       path: path.resolve(buildPath, 'assets/css'),
       filename: '[name].css',
@@ -52,7 +51,7 @@ WebpackSweetEntry(paths, ext, parentdir);
 
 | arg | type | Description | Example |
 | ---- | ---- | ----------- | ------- |
-| paths | `array` | Array of file path | `glob.sync(path.resolve(sourcePath, 'assets/js/**/*.js*'))` |
+| paths | `array` | Array of file path | `path.resolve(sourcePath, 'assets/js/**/*.js*')` |
 | ext | `string` | File extension | `js` |
 | parentdir | `string` | Parent Dirctory Name for files | `js` |
 

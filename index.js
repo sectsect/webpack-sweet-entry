@@ -1,3 +1,5 @@
+const glob = require('glob');
+
 function splitString(stringToSplit, separator) {
   const arrayOfStrings = stringToSplit.split(separator);
 
@@ -17,8 +19,9 @@ function dropUnderscoreFiles(obj) {
 }
 
 function toObject(paths, ext, parentdir) {
+  const glob = glob.sync(paths);
   const ret = {};
-  paths.forEach((path) => {
+  glob.forEach((path) => {
     const key = splitString(path, `/${parentdir}/`).slice(-1)[0].replace(`.${ext}`, '');
     ret[key] = path;
   });
