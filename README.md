@@ -27,8 +27,8 @@ module.exports = [
       path: path.resolve(buildPath, 'assets/js'),
       filename: '[name].js',
     },
-	module: {
-	  ...
+    module: {
+      ...
     }
   },
   {
@@ -38,7 +38,7 @@ module.exports = [
       filename: '[name].css',
     },
     module: {
-	  ...
+      ...
     }
   }
 ];
@@ -101,6 +101,8 @@ WebpackSweetEntry(paths, ext, parentdir);
 ## Change log  
 
 See [CHANGELOG](https://github.com/sectsect/webpack-sweet-entry/blob/master/CHANGELOG.md) file.
+
+- ***v1.1.0*** - :boom: Minor changes: The `glob` package was bundled within this package. Remove `glob()` in your webpack.config.js.
 
 ## Contributing
 
