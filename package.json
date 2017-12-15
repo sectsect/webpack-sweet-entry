@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/sectsect/webpack-sweet-entry/issues"
   },
-  "homepage": "https://github.com/sectsect/webpack-sweet-entry#readme"
+  "homepage": "https://github.com/sectsect/webpack-sweet-entry#readme",
+  "devDependencies": {
+    "glob": "^7.1.2"
+  }
 }
