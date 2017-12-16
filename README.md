@@ -1,5 +1,5 @@
-# webpack sweet entry
-Dynamic entry points / Partial files with underscore / Keep Directory Structure for webpack
+# <img src="https://github-sect.s3-ap-northeast-1.amazonaws.com/logo.svg" width="28" height="auto"> webpack sweet entry
+Dynamic entry points / Partial files with underscore / Keep Directory Structure for output
 
 ## Installation
 ```
@@ -7,7 +7,7 @@ npm i webpack-sweet-entry --save-dev
 ```
 ## Feature
 - Helps Dynamic entry points
-- Support Partial files (Files named with a leading underscore is ignored.)
+- Support Partial files (Files named with a leading underscore `_` is ignored.)
 - Keep Directory Structure for output
 
 
@@ -60,11 +60,13 @@ WebpackSweetEntry(paths, ext, parentdir);
 ```js
 {
   a: '/path/to/your/src/assets/js/a.js',
-  b: '/path/to/your/src/assets/js/b.js'
+  b: '/path/to/your/src/assets/js/b.js',
+  'dir/e': '/path/to/your/src/assets/js/dir/e.js'
 }
 {
   a: '/path/to/your/src/assets/css/a.css',
-  b: '/path/to/your/src/assets/css/b.css'
+  b: '/path/to/your/src/assets/css/b.css',
+  'dir/e': '/path/to/your/src/assets/css/dir/e.css'
 }
 ```
 
@@ -76,22 +78,32 @@ WebpackSweetEntry(paths, ext, parentdir);
 │   └── assets
 │       ├── css
 │       │   ├── a.css
-│       │   └── b.css
+│       │   ├── b.css
+│       │   └── dir
+│       │       └── e.css
 │       └── js
 │           ├── a.js
-│           └── b.js
+│           ├── b.js
+│           └── dir
+│               └── e.js
 ├── src
 │   └── assets
 │       ├── css
 │       │   ├── a.css
 │       │   ├── b.css
 │       │   ├── _c.css
-│       │   └── _d.css
+│       │   ├── _d.css
+│       │   └── dir
+│       │       ├── e.css
+│       │       └── _f.css
 │       └── js
 │           ├── a.js
 │           ├── b.js
 │           ├── _c.js
-│           └── _d.js
+│           ├── _d.js
+│           └── dir
+│               ├── e.js
+│               └── _f.js
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.js
@@ -102,7 +114,7 @@ WebpackSweetEntry(paths, ext, parentdir);
 
 See [CHANGELOG](https://github.com/sectsect/webpack-sweet-entry/blob/master/CHANGELOG.md) file.
 
-- ***v1.1.0*** - :boom: Minor changes: The `glob` package was bundled within this package. Remove `glob()` in your webpack.config.js.
+- **v1.1.0** - :boom: Minor changes: The `glob` package was bundled within this package. Remove `glob()` in your webpack.config.js.
 
 ## Contributing
 
