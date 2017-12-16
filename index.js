@@ -1,16 +1,14 @@
 const glob = require('glob');
 
 function splitString(stringToSplit, separator) {
-  const arrayOfStrings = stringToSplit.split(separator);
-
-  return arrayOfStrings;
+  return stringToSplit.split(separator);
 }
 
 function dropUnderscoreFiles(obj) {
   const returnobj = {};
   Object.keys(obj).forEach(function (key) {
     const val = this[key]; // this == obj
-    if (key.substring(0, 1) !== '_' && key.indexOf('/_') === -1) {
+    if (key.substring(0, 1) !== '_' && !key.includes('/_')) {
       returnobj[key] = val;
     }
   }, obj);
