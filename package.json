@@ -4,7 +4,7 @@
   "description": "Dynamic entry points / Partial files / Keep Directory Structure for webpack",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha --compilers js:babel-register --recursive $(find test -name 'test/*.spec.js')"
+    "test": "NODE_ENV=test mocha --require babel-register --recursive $(find test -name 'test/*.spec.js')"
   },
   "repository": {
     "type": "git",
