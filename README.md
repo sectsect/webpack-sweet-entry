@@ -1,4 +1,6 @@
 # <img src="https://github-sect.s3-ap-northeast-1.amazonaws.com/logo.svg" width="28" height="auto"> webpack sweet entry
+[![CircleCI](https://circleci.com/gh/sectsect/webpack-sweet-entry.svg?style=svg)](https://circleci.com/gh/sectsect/webpack-sweet-entry)
+
 Dynamic entry points / Partial files with underscore / Keep Directory Structure for output
 
 ## Installation
