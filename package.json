@@ -4,7 +4,7 @@
   "description": "Dynamic entry points / Partial files / Keep Directory Structure for webpack",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha --require babel-register --recursive $(find test -wholename 'test/*.spec.js')"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,7 @@
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "chai": "^4.1.2",
     "glob": "^7.1.2",
-    "mocha": "^4.0.1"
+    "jest": "^22.0.6"
   }
 }

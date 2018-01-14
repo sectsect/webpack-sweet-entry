@@ -1,15 +1,13 @@
 import path from 'path';
-import { expect, assert } from 'chai';
 import webpackSweetEntry from '../index';
 
 const jsPath = path.join(__dirname, 'js');
+const ab_path = __dirname.replace('/webpack-sweet-entry/test', '');
 const wse = webpackSweetEntry(path.resolve(jsPath, '**/*.js*'), 'js', 'js');
+const newObj = Object.assign({}, ...Object.keys(wse).map(k => ({[k]: wse[k].replace(ab_path, '')})));
 
 describe('Test', () => {
-  it('isObject()', () => {
-    assert.isObject(wse, 'webpackSweetEntry is an object');
-  });
-  it('have.all.keys()', () => {
-    expect(wse).to.have.all.keys('a', 'b', 'c');
+  it('toEqual()', () => {
+    expect(newObj).toEqual({ a: '/webpack-sweet-entry/test/js/a.js', b: '/webpack-sweet-entry/test/js/b.js', c: '/webpack-sweet-entry/test/js/c.js' });
   });
 });
