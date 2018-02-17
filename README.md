@@ -11,7 +11,7 @@ npm i webpack-sweet-entry --save-dev
 ```
 ## Feature
 - Helps Dynamic entry points
-- Support Partial files (Files named with a leading underscore `_` is ignored.)
+- Support Partial files (Files and Directories named with a leading underscore `_` is ignored.)
 - Keep Directory Structure for output
 
 
@@ -36,7 +36,7 @@ module.exports = [
     }
   },
   {
-    entry: WebpackSweetEntry(path.resolve(sourcePath, 'assets/css/**/*.css*'), 'css', 'css'),
+    entry: WebpackSweetEntry(path.resolve(sourcePath, 'assets/css/**/*.css'), 'css', 'css'),
     output: {
       path: path.resolve(buildPath, 'assets/css'),
       filename: '[name].css',
@@ -50,12 +50,12 @@ module.exports = [
 
 ## function
 ```js
-WebpackSweetEntry(paths, ext, parentdir);
+WebpackSweetEntry(path, ext, parentdir);
 ```
 
 | arg | type | Description | Example |
 | ---- | ---- | ----------- | ------- |
-| paths | `array` | Array of file path | `path.resolve(sourcePath, 'assets/js/**/*.js*')` |
+| path | `string` | File path | `path.resolve(sourcePath, 'assets/js/**/*.js*')` |
 | ext | `string` | File extension | `js` |
 | parentdir | `string` | Parent Dirctory Name for files | `js` |
 
@@ -105,6 +105,9 @@ WebpackSweetEntry(paths, ext, parentdir);
 │           ├── b.js
 │           ├── _c.js
 │           ├── _d.js
+│           ├── _modules
+│           │   ├── a.js
+│           │   └── b.js
 │           └── dir
 │               ├── e.js
 │               └── _f.js
