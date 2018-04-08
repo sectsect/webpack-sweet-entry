@@ -1,30 +1,26 @@
 const glob = require('glob');
 
-function splitString(stringToSplit, separator) {
-  return stringToSplit.split(separator);
-}
+const splitString = (stringToSplit, separator) => stringToSplit.split(separator);
 
-function dropUnderscoreFiles(obj) {
-  const returnobj = {};
+const dropUnderscoreFiles = (obj) => {
+  const r = {};
   Object.keys(obj).forEach(function (key) {
     const val = this[key]; // this == obj
     if (key.substring(0, 1) !== '_' && !key.includes('/_')) {
-      returnobj[key] = val;
+      r[key] = val;
     }
   }, obj);
+  return r;
+};
 
-  return returnobj;
-}
-
-function toObject(paths, ext, parentdir) {
-  const globpaths = glob.sync(paths);
-  const ret = {};
-  globpaths.forEach((path) => {
+const toObject = (paths, ext, parentdir) => {
+  const g = glob.sync(paths);
+  const r = {};
+  g.forEach((path) => {
     const key = splitString(path, `/${parentdir}/`).slice(-1)[0].replace(`.${ext}`, '');
-    ret[key] = path;
+    r[key] = path;
   });
-
-  return dropUnderscoreFiles(ret);
-}
+  return dropUnderscoreFiles(r);
+};
 
 module.exports = toObject;
