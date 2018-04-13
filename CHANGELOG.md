@@ -1,5 +1,12 @@
 # Change Log
 
+## [v1.1.5](https://github.com/sectsect/webpack-sweet-entry/tree/v1.1.5) (2018-04-08)
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v1.1.4...v1.1.5)
+
+**Closed issues:**
+
+- Support for images [\#1](https://github.com/sectsect/webpack-sweet-entry/issues/1)
+
 ## [v1.1.4](https://github.com/sectsect/webpack-sweet-entry/tree/v1.1.4) (2018-01-14)
 [Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v1.1.3...v1.1.4)
 
