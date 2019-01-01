@@ -63,4 +63,5 @@ src
 test
 .circleci
 .babelrc
+babel.config.js
 .editorconfig
