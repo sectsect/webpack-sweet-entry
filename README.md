@@ -10,7 +10,7 @@ Dynamic entry points / Partial files with underscore / Keep Directory Structure 
 npm i webpack-sweet-entry --save-dev
 ```
 ## Feature
-- Helps Dynamic entry points
+- Helps Dynamic entry points with wildcards
 - Support Partial files (Files and Directories named with a leading underscore `_` is ignored.)
 - Keep Directory Structure for output
 
