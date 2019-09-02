@@ -21,18 +21,18 @@
   "homepage": "https://github.com/sectsect/webpack-sweet-entry#readme",
   "browserslist": "> 1%, last 1 versions",
   "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^7.5.4",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^24.8.0",
+    "babel-jest": "^24.9.0",
     "glob": "^7.1.4",
-    "jest": "^24.8.0",
+    "jest": "^24.9.0",
     "merge": "^1.2.1",
-    "regenerator-runtime": "^0.13.2"
+    "regenerator-runtime": "^0.13.3"
   },
   "dependencies": {
-    "@babel/runtime-corejs3": "^7.5.4",
-    "core-js": "^3.1.4",
+    "@babel/runtime-corejs3": "^7.5.5",
+    "core-js": "^3.2.1",
     "fast-glob": "^3.0.4"
   }
 }
