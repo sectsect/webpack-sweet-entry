@@ -1,5 +1,18 @@
 # Change Log
 
+## [v1.1.12](https://github.com/sectsect/webpack-sweet-entry/tree/v1.1.12) (2019-09-02)
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v1.1.11...v1.1.12)
+
+**Closed issues:**
+
+- Is there a way to watch that the `new entry point added` by creating a new file in the `sourcePath` destination and have a new output file as a result in a `buildPath` folder without Webpack restarting manually? [\#2](https://github.com/sectsect/webpack-sweet-entry/issues/2)
+
+## [v1.1.11](https://github.com/sectsect/webpack-sweet-entry/tree/v1.1.11) (2019-07-14)
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v1.1.10...v1.1.11)
+
+## [v1.1.10](https://github.com/sectsect/webpack-sweet-entry/tree/v1.1.10) (2019-06-07)
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v1.1.9...v1.1.10)
+
 ## [v1.1.9](https://github.com/sectsect/webpack-sweet-entry/tree/v1.1.9) (2019-01-07)
 [Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v1.1.8...v1.1.9)
 
