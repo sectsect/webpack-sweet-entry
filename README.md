@@ -48,6 +48,23 @@ module.exports = [
 ];
 ```
 
+### Multiple(Mixed) extentions
+```js
+module.exports = [
+  {
+	entry: WebpackSweetEntry(path.resolve(sourcePath, 'assets/scripts/**/*.*s*'), ['ts', 'js'], 'scripts'),
+    output: {
+      path: path.resolve(buildPath, 'assets/js'),
+      filename: '[name].js',
+    },
+    module: {
+      ...
+    }
+  },
+  ...
+];
+```
+
 ## function
 ```js
 WebpackSweetEntry(path, ext, parentdir);
@@ -56,7 +73,7 @@ WebpackSweetEntry(path, ext, parentdir);
 | arg | type | Description | Example |
 | ---- | ---- | ----------- | ------- |
 | path | `string` | File path | `path.resolve(sourcePath, 'assets/js/**/*.js*')` |
-| ext | `string` | File extension | `js` |
+| ext | `string` \| `array` | File extension | `js` or `['ts', 'js']`
 | parentdir | `string` | Parent Dirctory Name for files | `js` |
 
 `WebpackSweetEntry()` returns object like the following.
@@ -120,8 +137,6 @@ WebpackSweetEntry(path, ext, parentdir);
 ## Change log  
 
 See [CHANGELOG](https://github.com/sectsect/webpack-sweet-entry/blob/master/CHANGELOG.md) file.
-
-- **v1.1.0** - :boom: Minor changes: The `glob` package was bundled within this package. Remove `glob()` in your webpack.config.js.
 
 ## Contributing
 
