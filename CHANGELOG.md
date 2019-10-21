@@ -1,5 +1,8 @@
 # Change Log
 
+## [v1.2.0](https://github.com/sectsect/webpack-sweet-entry/tree/v1.2.0) (2019-10-21)
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v1.1.12...v1.2.0)
+
 ## [v1.1.12](https://github.com/sectsect/webpack-sweet-entry/tree/v1.1.12) (2019-09-02)
 [Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v1.1.11...v1.1.12)
 
