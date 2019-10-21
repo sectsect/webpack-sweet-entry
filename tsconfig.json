@@ -1,0 +1,11 @@
+{
+  "extends": "@spotify/tsconfig/tsconfig.lib.json",
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*"],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "isolatedModules": false,
+    "noImplicitThis": false,
+    "sourceMap": false
+  }
+}
