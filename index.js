@@ -13,11 +13,17 @@ const dropUnderscoreFiles = (obj) => {
   return r;
 };
 
-const toObject = (paths, ext, parentdir) => {
+const createRegex = (ext) => {
+  const d = ext.map(v => `\\.${v}`);
+  return new RegExp(`${d.join('|')}`, 'gi');
+}
+
+const toObject = (paths, ext = 'js', parentdir = 'js') => {
   const g = fg.sync(paths);
   const r = {};
+  const rp = (Array.isArray(ext)) ? createRegex(ext) : `.${ext}`;
   g.forEach((path) => {
-    const key = splitString(path, `/${parentdir}/`).slice(-1)[0].replace(`.${ext}`, '');
+    const key = splitString(path, `/${parentdir}/`).slice(-1)[0].replace(rp, '');
     r[key] = path;
   });
   return dropUnderscoreFiles(r);
