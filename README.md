@@ -52,7 +52,7 @@ module.exports = [
 ```js
 module.exports = [
   {
-	entry: WebpackSweetEntry(path.resolve(sourcePath, 'assets/scripts/**/*.*s*'), ['ts', 'js'], 'scripts'),
+    entry: WebpackSweetEntry(path.resolve(sourcePath, 'assets/scripts/**/*.*s*'), ['ts', 'js'], 'scripts'),
     output: {
       path: path.resolve(buildPath, 'assets/js'),
       filename: '[name].js',
