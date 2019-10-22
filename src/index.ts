@@ -1,4 +1,4 @@
-const fg = require('fast-glob');
+import fg = require('fast-glob');
 
 interface EntryPoints {
   [key: string]: string;
