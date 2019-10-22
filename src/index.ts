@@ -1,9 +1,13 @@
-const fg = require('fast-glob');
+import fg = require('fast-glob');
 
-const splitString = (stringToSplit, separator) => stringToSplit.split(separator);
+interface EntryPoints {
+  [key: string]: string;
+}
 
-const dropUnderscoreFiles = (obj) => {
-  const r = {};
+const splitString = (stringToSplit: string, separator: string) => stringToSplit.split(separator);
+
+const dropUnderscoreFiles = (obj: EntryPoints) => {
+  const r: EntryPoints = {};
   Object.keys(obj).forEach(function (key) {
     const val = this[key]; // this == obj
     if (key.substring(0, 1) !== '_' && !key.includes('/_')) {
@@ -13,16 +17,16 @@ const dropUnderscoreFiles = (obj) => {
   return r;
 };
 
-const createRegex = (ext) => {
-  const d = ext.map(v => `\\.${v}`);
+const createRegex = (ext: string[]) => {
+  const d = ext.map((v: string) => `\\.${v}`);
   return new RegExp(`${d.join('|')}`, 'gi');
 }
 
-const toObject = (paths, ext = 'js', parentdir = 'js') => {
+const toObject  = (paths: string, ext: string | string[] = 'js', parentdir = 'js') => {
   const g = fg.sync(paths);
-  const r = {};
+  const r: EntryPoints = {};
   const rp = (Array.isArray(ext)) ? createRegex(ext) : `.${ext}`;
-  g.forEach((path) => {
+  g.forEach((path: string) => {
     const key = splitString(path, `/${parentdir}/`).slice(-1)[0].replace(rp, '');
     r[key] = path;
   });

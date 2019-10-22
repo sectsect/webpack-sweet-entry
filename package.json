@@ -1,10 +1,19 @@
 {
-  "name": "webpack-sweet-entry",
-  "version": "1.2.0",
-  "description": "Dynamic entry points / Partial files / Keep Directory Structure for webpack",
-  "main": "index.js",
+  "name": "@sect/webpack-sweet-entry",
+  "version": "2.0.0",
+  "description": "Dynamic entry points with wildcards / Partial files named with a leading underscore / Keep Directory Structure for output",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -21,17 +30,21 @@
   "homepage": "https://github.com/sectsect/webpack-sweet-entry#readme",
   "browserslist": "> 1%, last 1 versions",
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^24.9.0",
+    "@spotify/prettier-config": "^3.0.0",
+    "@spotify/tsconfig": "^3.0.0",
+    "@types/jest": "^24.0.19",
     "jest": "^24.9.0",
-    "merge": "^1.2.1",
-    "regenerator-runtime": "^0.13.3"
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.4"
   },
   "dependencies": {
-    "@babel/runtime-corejs3": "^7.6.3",
-    "core-js": "^3.3.2",
+    "@types/node": "^12.11.2",
     "fast-glob": "^3.1.0"
-  }
+  },
+  "files": [
+    "dist/**/*"
+  ]
 }
