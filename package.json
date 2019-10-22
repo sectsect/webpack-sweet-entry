@@ -1,5 +1,5 @@
 {
-  "name": "webpack-sweet-entry",
+  "name": "@sect/webpack-sweet-entry",
   "version": "1.2.0",
   "description": "Dynamic entry points with wildcards / Partial files named with a leading underscore / Keep Directory Structure for output",
   "main": "dist/index.js",

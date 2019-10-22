@@ -1,13 +1,13 @@
 # <img src="https://github-sect.s3-ap-northeast-1.amazonaws.com/logo.svg" width="28" height="auto"> webpack sweet entry
-[![CircleCI](https://circleci.com/gh/sectsect/webpack-sweet-entry.svg?style=svg)](https://circleci.com/gh/sectsect/webpack-sweet-entry) [![npm version](https://badge.fury.io/js/webpack-sweet-entry.svg)](https://badge.fury.io/js/webpack-sweet-entry) [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![CircleCI](https://circleci.com/gh/sectsect/webpack-sweet-entry.svg?style=svg)](https://circleci.com/gh/sectsect/webpack-sweet-entry) [![npm version](https://badge.fury.io/js/@sect/webpack-sweet-entry.svg)](https://badge.fury.io/js/webpack-sweet-entry) [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
-[![NPM](https://nodei.co/npm/webpack-sweet-entry.png)](https://npmjs.org/package/webpack-sweet-entry)
+[![NPM](https://nodei.co/npm/@sect/webpack-sweet-entry.png)](https://npmjs.org/package/@sect/webpack-sweet-entry)
 
 Dynamic entry points / Partial files with underscore / Keep Directory Structure for output
 
 ## Installation
 ```
-npm i webpack-sweet-entry --save-dev
+npm install --save-dev @sect/webpack-sweet-entry
 ```
 ## Feature
 - Helps Dynamic entry points with wildcards
@@ -19,7 +19,7 @@ npm i webpack-sweet-entry --save-dev
 ```js
 const webpack = require('webpack');
 const path = require('path');
-const WebpackSweetEntry = require('webpack-sweet-entry');
+const WebpackSweetEntry = require('@sect/webpack-sweet-entry');
 
 const sourcePath = path.join(__dirname, 'src');
 const buildPath = path.join(__dirname, 'dist');
