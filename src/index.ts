@@ -8,7 +8,7 @@ const splitString = (stringToSplit: string, separator: string) => stringToSplit.
 
 const dropUnderscoreFiles = (obj: EntryPoints) => {
   const r: EntryPoints = {};
-  Object.keys(obj).forEach(function (key) {
+  Object.keys(obj).forEach(function(key) {
     const val = this[key]; // this == obj
     if (key.substring(0, 1) !== '_' && !key.includes('/_')) {
       r[key] = val;
@@ -20,17 +20,17 @@ const dropUnderscoreFiles = (obj: EntryPoints) => {
 const createRegex = (ext: string[]) => {
   const d = ext.map((v: string) => `\\.${v}`);
   return new RegExp(`${d.join('|')}`, 'gi');
-}
+};
 
-const toObject  = (paths: string, ext: string | string[] = 'js', parentdir = 'js') => {
+export const WebpackSweetEntry = (paths: string, ext: string | string[] = 'js', parentdir = 'js') => {
   const g = fg.sync(paths);
   const r: EntryPoints = {};
-  const rp = (Array.isArray(ext)) ? createRegex(ext) : `.${ext}`;
+  const rp = Array.isArray(ext) ? createRegex(ext) : `.${ext}`;
   g.forEach((path: string) => {
-    const key = splitString(path, `/${parentdir}/`).slice(-1)[0].replace(rp, '');
+    const key = splitString(path, `/${parentdir}/`)
+      .slice(-1)[0]
+      .replace(rp, '');
     r[key] = path;
   });
   return dropUnderscoreFiles(r);
 };
-
-module.exports = toObject;
