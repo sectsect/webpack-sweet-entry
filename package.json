@@ -1,6 +1,6 @@
 {
   "name": "@sect/webpack-sweet-entry",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Dynamic entry points with wildcards / Partial files named with a leading underscore / Keep Directory Structure for output",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -33,6 +33,7 @@
     "@spotify/prettier-config": "^3.0.0",
     "@spotify/tsconfig": "^3.0.0",
     "@types/jest": "^24.0.19",
+    "@types/node": "^12.11.7",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.1.0",
@@ -41,7 +42,6 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "@types/node": "^12.11.2",
     "fast-glob": "^3.1.0"
   },
   "files": [
