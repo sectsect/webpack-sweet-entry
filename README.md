@@ -19,7 +19,7 @@ npm install --save-dev @sect/webpack-sweet-entry
 ```js
 const webpack = require('webpack');
 const path = require('path');
-const WebpackSweetEntry = require('@sect/webpack-sweet-entry');
+const { WebpackSweetEntry } = require('@sect/webpack-sweet-entry');
 
 const sourcePath = path.join(__dirname, 'src');
 const buildPath = path.join(__dirname, 'dist');
@@ -132,6 +132,17 @@ WebpackSweetEntry(path, ext, parentdir);
 ├── package.json
 ├── postcss.config.js
 └── webpack.config.js
+```
+
+## Migrate form v1 to v2
+```
+$ npm uninstall webpack-sweet-entry
+$ npm install --save-dev @sect/webpack-sweet-entry
+```
+
+```diff
+- const WebpackSweetEntry = require('webpack-sweet-entry');
++ const { WebpackSweetEntry } = require('@sect/webpack-sweet-entry');
 ```
 
 ## Change log  
