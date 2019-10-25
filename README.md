@@ -134,7 +134,7 @@ WebpackSweetEntry(path, ext, parentdir);
 └── webpack.config.js
 ```
 
-## Migrate form v1 to v2
+## Migrate from v1 to v2
 ```
 $ npm uninstall webpack-sweet-entry
 $ npm install --save-dev @sect/webpack-sweet-entry
