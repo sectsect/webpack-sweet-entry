@@ -3,16 +3,16 @@
 
 [![NPM](https://nodei.co/npm/@sect/webpack-sweet-entry.png)](https://npmjs.org/package/@sect/webpack-sweet-entry)
 
-Dynamic entry points / Partial files with underscore / Keep Directory Structure for output
+Dynamic entry points / Partial files with underscore / Keep Directory Structure
 
 ## Install
 ```
 npm install --save-dev @sect/webpack-sweet-entry
 ```
 ## Features
-- Helps Dynamic entry points with wildcards
+- Help Dynamic Entry Points with wildcards
 - Support Partial files (Files and Directories named with a leading underscore `_` is ignored.)
-- Keep Directory Structure for output
+- Keep directory structure in the output directory
 
 
 ## Usage Example
@@ -148,16 +148,6 @@ $ npm install --save-dev @sect/webpack-sweet-entry
 ## Change log  
 
 See [CHANGELOG](https://github.com/sectsect/webpack-sweet-entry/blob/master/CHANGELOG.md) file.
-
-## Contributing
-
-1. Create an issue and describe your idea
-2. [Fork it](https://github.com/sectsect/webpack-sweet-entry/fork)
-3. Create your feature branch (`git checkout -b my-new-feature`)
-4. Commit your changes (`git commit -am 'Add some feature'`)
-5. Publish the branch (`git push origin my-new-feature`)
-6. Create a new Pull Request
-7. Profit! :white_check_mark:
 
 ## License
 
