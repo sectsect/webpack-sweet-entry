@@ -14,7 +14,7 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "release": "release-it --dry-run"
+    "release": "release-it"
   },
   "publishConfig": {
     "access": "public"
