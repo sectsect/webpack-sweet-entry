@@ -16,6 +16,9 @@
     "postversion": "git push && git push --tags",
     "release": "release-it --dry-run"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sectsect/webpack-sweet-entry.git"
