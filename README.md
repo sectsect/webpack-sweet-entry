@@ -145,7 +145,7 @@ $ npm install --save-dev @sect/webpack-sweet-entry
 + const { WebpackSweetEntry } = require('@sect/webpack-sweet-entry');
 ```
 
-## Change log  
+## Changelog 
 
 See [CHANGELOG](https://github.com/sectsect/webpack-sweet-entry/blob/master/CHANGELOG.md) file.
 
