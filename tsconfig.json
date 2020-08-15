@@ -3,8 +3,12 @@
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"],
   "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
     "outDir": "./dist",
     "isolatedModules": false,
+    "noEmit": false,
     "noImplicitThis": false,
     "sourceMap": false
   }
