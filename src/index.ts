@@ -22,7 +22,7 @@ const createRegex = (ext: string[]) => {
   return new RegExp(`${d.join('|')}`, 'gi');
 };
 
-export const WebpackSweetEntry = (paths: string, ext: string | string[] = 'js', parentdir = 'js') => {
+export const WebpackSweetEntry = (paths: string, ext: string | string[] = 'js', parentdir = 'js'): EntryPoints => {
   const g = fg.sync(paths);
   const r: EntryPoints = {};
   const rp = Array.isArray(ext) ? createRegex(ext) : `.${ext}`;
