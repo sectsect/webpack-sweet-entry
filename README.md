@@ -72,7 +72,7 @@ WebpackSweetEntry(path, ext, parentdir);
 
 | arg | type | Description | Example |
 | ---- | ---- | ----------- | ------- |
-| path | `string` | File path | `path.resolve(sourcePath, 'assets/js/**/*.js*')` |
+| path | `string` \| `array` | File path glob(s) | `path.resolve(sourcePath, 'assets/js/**/*.js*')` or `[path.resolve(sourcePath, 'assets/js/**/*.js*'), '!**/a.js']` |
 | ext | `string` \| `array` | File extension | `js` or `['ts', 'js']`
 | parentdir | `string` | Parent Dirctory Name for files | `js` |
 
