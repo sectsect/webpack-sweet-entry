@@ -1,4 +1,5 @@
 import fg from 'fast-glob';
+import { Pattern } from 'fast-glob/out/types';
 
 interface EntryPoints {
   [key: string]: string;
@@ -22,7 +23,11 @@ const createRegex = (ext: string[]) => {
   return new RegExp(`${d.join('|')}`, 'gi');
 };
 
-export const WebpackSweetEntry = (paths: string, ext: string | string[] = 'js', parentdir = 'js'): EntryPoints => {
+export const WebpackSweetEntry = (
+  paths: Pattern | Pattern[],
+  ext: string | string[] = 'js',
+  parentdir = 'js',
+): EntryPoints => {
   const g = fg.sync(paths);
   const r: EntryPoints = {};
   const rp = Array.isArray(ext) ? createRegex(ext) : `.${ext}`;
