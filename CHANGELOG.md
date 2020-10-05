@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.5.0](https://github.com/sectsect/webpack-sweet-entry/tree/v2.5.0) (2020-10-05)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v2.4.0...v2.5.0)
+
+**Merged pull requests:**
+
+- Add ts support for providing array of globs [\#5](https://github.com/sectsect/webpack-sweet-entry/pull/5) ([hmnd](https://github.com/hmnd))
+
 ## [v2.4.0](https://github.com/sectsect/webpack-sweet-entry/tree/v2.4.0) (2020-09-30)
 
 [Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v2.3.0...v2.4.0)
