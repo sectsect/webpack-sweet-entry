@@ -65,15 +65,15 @@ module.exports = [
 ];
 ```
 
-## Function
+## API
 ```js
 WebpackSweetEntry(path, ext, parentdir);
 ```
 
 | arg | type | Description | Example |
 | ---- | ---- | ----------- | ------- |
-| path | `string` \| `array` | File path glob(s) | `path.resolve(sourcePath, 'assets/js/**/*.js*')` or `[path.resolve(sourcePath, 'assets/js/**/*.js*'), '!**/a.js']` |
-| ext | `string` \| `array` | File extension | `js` or `['ts', 'js']`
+| path | `string` \| `string[]` | File path glob(s) | `path.resolve(sourcePath, 'assets/js/**/*.js*')` or `[path.resolve(sourcePath, 'assets/js/**/*.js*'), '!**/a.js']` |
+| ext | `string` \| `string[]` | File extension | `js` or `['ts', 'js']`
 | parentdir | `string` | Parent Dirctory Name for files | `js` |
 
 Returns `object` like the following.
@@ -92,7 +92,7 @@ Returns `object` like the following.
 ```
 
 
-### Result
+### Build Result
 ```
 .
 ├── dist
