@@ -1,6 +1,6 @@
 {
   "name": "@sect/webpack-sweet-entry",
-  "version": "2.5.2",
+  "version": "2.6.0",
   "description": "Dynamic entry points with wildcards / Partial files named with a leading underscore / Keep Directory Structure for output",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
