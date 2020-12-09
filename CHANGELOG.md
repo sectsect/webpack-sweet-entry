@@ -1,5 +1,21 @@
 # Changelog
 
+## [v2.6.1](https://github.com/sectsect/webpack-sweet-entry/tree/v2.6.1) (2020-12-09)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v2.6.0...v2.6.1)
+
+## [v2.6.0](https://github.com/sectsect/webpack-sweet-entry/tree/v2.6.0) (2020-12-03)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v2.5.2...v2.6.0)
+
+## [v2.5.2](https://github.com/sectsect/webpack-sweet-entry/tree/v2.5.2) (2020-11-26)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v2.5.1...v2.5.2)
+
+## [v2.5.1](https://github.com/sectsect/webpack-sweet-entry/tree/v2.5.1) (2020-11-23)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v2.5.0...v2.5.1)
+
 ## [v2.5.0](https://github.com/sectsect/webpack-sweet-entry/tree/v2.5.0) (2020-10-05)
 
 [Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v2.4.0...v2.5.0)
