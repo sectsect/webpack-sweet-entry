@@ -9,8 +9,8 @@ const splitString = (stringToSplit: string, separator: string) => stringToSplit.
 
 const dropUnderscoreFiles = (obj: EntryPoints) => {
   const r: EntryPoints = {};
-  Object.keys(obj).forEach(function (key) {
-    const val = this[key];
+  Object.keys(obj).forEach(key => {
+    const val = obj[key];
     if (key.substring(0, 1) !== '_' && !key.includes('/_')) {
       r[key] = val;
     }
