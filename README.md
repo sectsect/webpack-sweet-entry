@@ -152,3 +152,8 @@ See [CHANGELOG](https://github.com/sectsect/webpack-sweet-entry/blob/master/CHAN
 ## License
 
 See [LICENSE](https://github.com/sectsect/webpack-sweet-entry/blob/master/LICENSE) file.
+
+<p align="center">✌️</p>
+<p align="center">
+<sub><sup>A little project by <a href="https://github.com/sectsect">@sectsect</a></sup></sub>
+</p>
