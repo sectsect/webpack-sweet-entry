@@ -38,9 +38,6 @@ module.exports = {
     "import/no-default-export": "error",
     "no-alert": 0,
     "no-console": 0,
-    "no-shadow": 0,
-    "no-undef": 0,
-    "no-unused-vars": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
     "@typescript-eslint/interface-name-prefix": 0,
     "@typescript-eslint/naming-convention": [
