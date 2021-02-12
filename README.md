@@ -74,7 +74,7 @@ WebpackSweetEntry(path, ext, parentdir);
 | ---- | ---- | ----------- | ------- |
 | path | `string` \| `string[]` | File path glob(s) | `path.resolve(sourcePath, 'assets/js/**/*.js*')` or `[path.resolve(sourcePath, 'assets/js/**/*.js*'), '!**/a.js']` |
 | ext | `string` \| `string[]` | File extension | `js` or `['ts', 'js']`
-| parentdir | `string` | Parent Dirctory Name for files | `js` |
+| parentdir | `string` | Parent Dirctory Name for files (The directory name where the tree starts) | `js` |
 
 Returns `object` like the following.
 
