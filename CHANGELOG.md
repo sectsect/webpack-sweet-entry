@@ -1,5 +1,14 @@
 # Changelog
 
+## [v3.0.1](https://github.com/sectsect/webpack-sweet-entry/tree/v3.0.1) (2021-03-30)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v3.0.0...v3.0.1)
+
+**Merged pull requests:**
+
+- Bump y18n from 4.0.0 to 4.0.1 [\#7](https://github.com/sectsect/webpack-sweet-entry/pull/7) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump node-notifier from 8.0.0 to 8.0.1 [\#6](https://github.com/sectsect/webpack-sweet-entry/pull/6) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v3.0.0](https://github.com/sectsect/webpack-sweet-entry/tree/v3.0.0) (2020-12-09)
 
 [Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v2.6.1...v3.0.0)
