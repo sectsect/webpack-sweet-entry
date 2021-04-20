@@ -1,5 +1,5 @@
 # @sect/webpack-sweet-entry
-[![CircleCI](https://circleci.com/gh/sectsect/webpack-sweet-entry.svg?style=svg)](https://circleci.com/gh/sectsect/webpack-sweet-entry) [![codecov](https://codecov.io/gh/sectsect/webpack-sweet-entry/branch/master/graph/badge.svg?token=0EKNBV7VK1)](https://codecov.io/gh/sectsect/webpack-sweet-entry) [![npm version](https://badge.fury.io/js/%40sect%2Fwebpack-sweet-entry.svg)](https://badge.fury.io/js/%40sect%2Fwebpack-sweet-entry) [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![CircleCI](https://circleci.com/gh/sectsect/webpack-sweet-entry.svg?style=svg)](https://circleci.com/gh/sectsect/webpack-sweet-entry) [![codecov](https://codecov.io/gh/sectsect/webpack-sweet-entry/branch/master/graph/badge.svg?token=0EKNBV7VK1)](https://codecov.io/gh/sectsect/webpack-sweet-entry) ![CodeQL](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/codeql-analysis.yml/badge.svg) [![npm version](https://badge.fury.io/js/%40sect%2Fwebpack-sweet-entry.svg)](https://badge.fury.io/js/%40sect%2Fwebpack-sweet-entry) [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 [![NPM](https://nodei.co/npm/@sect/webpack-sweet-entry.png)](https://npmjs.org/package/@sect/webpack-sweet-entry)
 
