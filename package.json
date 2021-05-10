@@ -1,6 +1,6 @@
 {
   "name": "@sect/webpack-sweet-entry",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Dynamic entry points with wildcards / Partial files named with a leading underscore / Keep Directory Structure for output",
   "engines": {
     "node": ">=12.0.0"
