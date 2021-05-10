@@ -1,5 +1,9 @@
 # Changelog
 
+## [v4.0.1](https://github.com/sectsect/webpack-sweet-entry/tree/v4.0.1) (2021-05-10)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v4.0.0...v4.0.1)
+
 ## [v4.0.0](https://github.com/sectsect/webpack-sweet-entry/tree/v4.0.0) (2021-04-20)
 
 [Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v3.0.1...v4.0.0)
