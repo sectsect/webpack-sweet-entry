@@ -1,1 +1,1 @@
-console.log('a.js');
+console.log('_d.ts');
