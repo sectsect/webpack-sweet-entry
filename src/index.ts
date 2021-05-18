@@ -20,7 +20,7 @@ const dropUnderscoreFiles = (obj: EntryPoints) => {
 
 const createRegex = (ext: string[]) => {
   const d = ext.map((v: string) => `\\.${v}`);
-  return new RegExp(`${d.join('|')}`, 'gi');
+  return new RegExp(`(${d.join('|')})$`, 'gi');
 };
 
 export const WebpackSweetEntry = (
