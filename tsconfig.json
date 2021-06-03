@@ -1,7 +1,7 @@
 {
   "extends": "@spotify/tsconfig",
-  "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*"],
+  // "include": ["src"],
+  // "exclude": ["node_modules", "**/__tests__/*"],
   "compilerOptions": {
     "target": "es2019",
     "module": "commonjs",
@@ -12,5 +12,15 @@
     "noImplicitThis": false,
     "sourceMap": false,
     "esModuleInterop": true
-  }
+  },
+  "include": [
+    "src/**/*",
+    ".eslintrc.js"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "**/*.spec.ts",
+    "**/__tests__/*"
+  ]
 }

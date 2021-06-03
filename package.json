@@ -37,25 +37,28 @@
   },
   "homepage": "https://github.com/sectsect/webpack-sweet-entry#readme",
   "browserslist": "> 1%, last 1 versions",
+  "eslintIgnore": [
+    "/jest.config.js"
+  ],
   "devDependencies": {
     "@spotify/prettier-config": "^10.0.0",
     "@spotify/tsconfig": "^10.0.0",
     "@types/jest": "^26.0.23",
-    "@types/node": "^15.0.2",
-    "@typescript-eslint/eslint-plugin": "^4.22.1",
-    "@typescript-eslint/parser": "^4.22.1",
-    "eslint": "^7.26.0",
+    "@types/node": "^15.12.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.27.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
-    "jest": "^26.6.3",
+    "eslint-plugin-react": "^7.24.0",
+    "jest": "^27.0.4",
     "prettier": "^2.3.0",
-    "release-it": "^14.6.2",
-    "ts-jest": "^26.5.6",
-    "typescript": "^4.2.4"
+    "release-it": "^14.7.0",
+    "ts-jest": "^27.0.2",
+    "typescript": "^4.3.2"
   },
   "dependencies": {
     "fast-glob": "^3.2.5"
