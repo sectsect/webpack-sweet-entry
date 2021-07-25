@@ -1,5 +1,21 @@
 # Changelog
 
+## [v4.1.3](https://github.com/sectsect/webpack-sweet-entry/tree/v4.1.3) (2021-07-25)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v4.1.2...v4.1.3)
+
+## [v4.1.2](https://github.com/sectsect/webpack-sweet-entry/tree/v4.1.2) (2021-06-22)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v4.1.1...v4.1.2)
+
+## [v4.1.1](https://github.com/sectsect/webpack-sweet-entry/tree/v4.1.1) (2021-06-03)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v4.1.0...v4.1.1)
+
+## [v4.1.0](https://github.com/sectsect/webpack-sweet-entry/tree/v4.1.0) (2021-05-18)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v4.0.1...v4.1.0)
+
 ## [v4.0.1](https://github.com/sectsect/webpack-sweet-entry/tree/v4.0.1) (2021-05-10)
 
 [Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v4.0.0...v4.0.1)
