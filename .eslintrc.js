@@ -66,6 +66,9 @@ module.exports = {
     'prettier/prettier': 'error',
   },
   settings: {
+    react: {
+      version: 'latest',
+    },
     'import/extensions': ['.js', '.jsx', '.json', '.ts', '.tsx'],
     // "import/resolver": {
     //   "webpack": {
