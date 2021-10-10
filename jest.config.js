@@ -1,10 +1,14 @@
 module.exports = {
-  transform: {
-    "^.+\\.(t|j)sx?$": "ts-jest"
-  },
-  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
-  testPathIgnorePatterns: ["<rootDir>/src/__tests__/files/"],
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  testMatch: ['<rootDir>/**/*(*.)@(test).[tj]s?(x)'],
+  testPathIgnorePatterns: [
+    '/node_modules/', // default
+    // '<rootDir>/templates/', // don't run tests in the templates
+    // '<rootDir>/test/.*/fixtures/', // don't run tests in fixtures
+    // '<rootDir>/stage-.*/', // don't run tests in auto-generated (and auto-removed) test dirs
+    '<rootDir>/src/__tests__/files/', // don't run tests in fixtures
+  ],
   // globalSetup: "./src/__tests__/config/setup.js",
   // globalTeardown: "./src/__tests__/config//teardown.js"
 };

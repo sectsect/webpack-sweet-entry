@@ -15,7 +15,8 @@
   },
   "include": [
     "src/**/*",
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "jest.config.js"
   ],
   "exclude": [
     "dist",
