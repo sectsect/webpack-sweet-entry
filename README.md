@@ -10,9 +10,9 @@ Dynamic entry points / Partial files with underscore / Keep Directory Structure
 npm install --save-dev @sect/webpack-sweet-entry
 ```
 ## Features
-- Help Dynamic Entry Points with wildcards
-- Support Partial files (Files and Directories named with a leading underscore `_` is ignored.)
-- Keep directory structure in the output directory
+- Help dynamic entry points with glob pattern.
+- Support Partial files (Files and Directories named with a leading underscore `_` is ignored.).
+- Keep directory structure in the output directory.
 
 
 ## Usage Example
@@ -134,7 +134,7 @@ Returns `object` like the following.
 └── webpack.config.js
 ```
 
-## Migrate from v1 to v2
+## Migrate from v1
 ```
 $ npm uninstall webpack-sweet-entry
 $ npm install --save-dev @sect/webpack-sweet-entry
