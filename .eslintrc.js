@@ -11,8 +11,14 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  extends: ['airbnb', 'airbnb-typescript', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
-  plugins: ['@typescript-eslint'],
+  extends: [
+    'airbnb',
+    'airbnb-typescript',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jest/recommended',
+    'plugin:prettier/recommended',
+  ],
+  plugins: ['@typescript-eslint', 'jest'],
   ignorePatterns: ['__tests__'],
   rules: {
     'func-names': 0,
