@@ -3,16 +3,16 @@
 
 [![NPM](https://nodei.co/npm/@sect/webpack-sweet-entry.png)](https://npmjs.org/package/@sect/webpack-sweet-entry)
 
-Dynamic entry points / Partial files with underscore / Keep Directory Structure
+Multiple entry points with glob pattern / Partial files with underscore / Preserve directory structure 
 
 ## Install
 ```
 npm install --save-dev @sect/webpack-sweet-entry
 ```
 ## Features
-- Help dynamic entry points with glob pattern.
-- Support Partial files (Files and Directories named with a leading underscore `_` is ignored.).
-- Keep directory structure in the output directory.
+- Multiple entry points with glob pattern.
+- Partial files (Files and Directories named with a leading underscore `_` is ignored.).
+- Preserve directory structure in `dist` directory.
 
 
 ## Usage Example

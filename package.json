@@ -1,7 +1,7 @@
 {
   "name": "@sect/webpack-sweet-entry",
   "version": "5.0.4",
-  "description": "Dynamic entry points with glob pattern / Partial files named with a leading underscore / Keep directory structure in Dist directory",
+  "description": "Multiple entry points with glob pattern / Partial files with underscore / Preserve directory structure",
   "engines": {
     "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
   },
