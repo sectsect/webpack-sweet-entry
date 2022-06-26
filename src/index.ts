@@ -5,7 +5,8 @@ interface EntryPoints {
   [key: string]: string;
 }
 
-const splitString = (stringToSplit: string, separator: string) => stringToSplit.split(separator);
+const splitString = (stringToSplit: string, separator: string) =>
+  stringToSplit.split(separator);
 
 const dropUnderscoreFiles = (obj: EntryPoints) => {
   const r: EntryPoints = {};
@@ -31,7 +32,9 @@ export const WebpackSweetEntry = (
   const r: EntryPoints = {};
   const rp = Array.isArray(ext) ? createRegex(ext) : `.${ext}`;
   g.forEach((path: string) => {
-    const key = splitString(path, `/${parentdir}/`).slice(-1)[0].replace(rp, '');
+    const key = splitString(path, `/${parentdir}/`)
+      .slice(-1)[0]
+      .replace(rp, '');
     r[key] = path;
   });
   return dropUnderscoreFiles(r);
