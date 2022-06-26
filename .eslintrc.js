@@ -73,7 +73,7 @@ module.exports = {
   },
   settings: {
     react: {
-      version: 'latest',
+      version: 'detect',
     },
     'import/extensions': ['.js', '.jsx', '.json', '.ts', '.tsx'],
     // "import/resolver": {
