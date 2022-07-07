@@ -3,8 +3,15 @@ import { WebpackSweetEntry } from '../index';
 
 const tsPath = path.join(__dirname, 'files/multi');
 const abPath = __dirname.replace('/webpack-sweet-entry/src/__tests__', '');
-const wse = WebpackSweetEntry(path.resolve(tsPath, '**/*.*s*'), ['ts', 'tsx', 'js', 'jsx'], 'js');
-const obj = Object.assign({}, ...Object.keys(wse).map(k => ({ [k]: wse[k].replace(abPath, '') })));
+const wse = WebpackSweetEntry(
+  path.resolve(tsPath, '**/*.*s*'),
+  ['ts', 'tsx', 'js', 'jsx'],
+  'js',
+);
+const obj = Object.assign(
+  {},
+  ...Object.keys(wse).map(k => ({ [k]: wse[k].replace(abPath, '') })),
+);
 
 describe('Test', () => {
   it('toEqual()', () => {
