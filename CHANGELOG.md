@@ -1,5 +1,17 @@
 # Changelog
 
+## [v5.0.12](https://github.com/sectsect/webpack-sweet-entry/tree/v5.0.12) (2022-09-10)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v5.0.11...v5.0.12)
+
+## [v5.0.11](https://github.com/sectsect/webpack-sweet-entry/tree/v5.0.11) (2022-07-25)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v5.0.10...v5.0.11)
+
+## [v5.0.10](https://github.com/sectsect/webpack-sweet-entry/tree/v5.0.10) (2022-07-07)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v5.0.9...v5.0.10)
+
 ## [v5.0.9](https://github.com/sectsect/webpack-sweet-entry/tree/v5.0.9) (2022-06-26)
 
 [Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v5.0.8...v5.0.9)
