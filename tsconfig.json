@@ -10,7 +10,7 @@
     "isolatedModules": false,
     "noEmit": false,
     "noImplicitThis": false,
-    "sourceMap": false,
+    "sourceMap": true,
     "esModuleInterop": true
   },
   "include": [
