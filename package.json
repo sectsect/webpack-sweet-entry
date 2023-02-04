@@ -1,6 +1,6 @@
 {
   "name": "@sect/webpack-sweet-entry",
-  "version": "5.0.15",
+  "version": "5.0.16",
   "description": "Multiple entry points with glob pattern / Partial files with underscore / Preserve directory structure",
   "engines": {
     "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
