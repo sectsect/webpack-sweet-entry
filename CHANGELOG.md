@@ -1,5 +1,25 @@
 # Changelog
 
+## [v6.0.4](https://github.com/sectsect/webpack-sweet-entry/tree/v6.0.4) (2023-09-02)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v6.0.3...v6.0.4)
+
+## [v6.0.3](https://github.com/sectsect/webpack-sweet-entry/tree/v6.0.3) (2023-04-20)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v6.0.2...v6.0.3)
+
+## [v6.0.2](https://github.com/sectsect/webpack-sweet-entry/tree/v6.0.2) (2023-04-13)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v6.0.1...v6.0.2)
+
+## [v6.0.1](https://github.com/sectsect/webpack-sweet-entry/tree/v6.0.1) (2023-04-08)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v6.0.0...v6.0.1)
+
+**Merged pull requests:**
+
+- chore\(deps\): bump vm2 from 3.9.11 to 3.9.15 [\#14](https://github.com/sectsect/webpack-sweet-entry/pull/14) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v6.0.0](https://github.com/sectsect/webpack-sweet-entry/tree/v6.0.0) (2023-02-13)
 
 [Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v5.0.17...v6.0.0)
