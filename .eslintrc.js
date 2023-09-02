@@ -18,7 +18,7 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:prettier/recommended',
   ],
-  plugins: ['@typescript-eslint', 'jest'],
+  plugins: ['@typescript-eslint', 'eslint-plugin-tsdoc', 'jest'],
   ignorePatterns: ['__tests__'],
   rules: {
     'func-names': 0,
@@ -70,6 +70,7 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/prefer-optional-chain': 'error',
     'prettier/prettier': 'error',
+    'tsdoc/syntax': 'warn',
   },
   settings: {
     react: {
