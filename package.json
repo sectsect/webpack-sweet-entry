@@ -3,7 +3,7 @@
   "version": "6.0.4",
   "description": "Multiple entry points with glob pattern / Partial files with underscore / Preserve directory structure",
   "engines": {
-    "node": "^14.17.0 || >=16.0.0"
+    "node": ">=18.0.0"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -3,7 +3,7 @@
   // "include": ["src"],
   // "exclude": ["node_modules", "**/__tests__/*"],
   "compilerOptions": {
-    "target": "es2020",
+    "target": "ES2022",
     "module": "commonjs",
     "declaration": true,
     "outDir": "./dist",
