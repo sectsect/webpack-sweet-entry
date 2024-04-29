@@ -10,18 +10,15 @@ on:
 
 jobs:
   build:
-
-    defaults:
-      run:
-        working-directory: "~/webpack-sweet-entry"
-
     runs-on: ubuntu-latest
-
-    container:
-      image: node:21.1.0
 
     steps:
     - uses: actions/checkout@v4.1.0
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 21.1.0
 
     - name: restore_cache
       uses: actions/cache@v3.3.2
@@ -42,4 +39,3 @@ jobs:
       uses: codecov/codecov-action@v4.0.1
       with:
         files: ./coverage/lcov.info
-
