@@ -1,0 +1,43 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4.1.0
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        # node-version: 21.1.0
+        node-version-file: 'package.json'
+
+    - name: Restore Cache
+      id: cache-node-modules
+      uses: actions/cache@v4
+      with:
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        path: node_modules
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Test
+      run: npm run test
+
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4.0.1
+      with:
+        token: ${{ secrets.CODE_COV_TOKEN }}
+        files: ./coverage/lcov.info
