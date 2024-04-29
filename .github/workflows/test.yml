@@ -1,0 +1,42 @@
+name: Test
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    defaults:
+      run:
+        working-directory: "~/webpack-sweet-entry"
+
+    runs-on: ubuntu-latest
+
+    container:
+      image: node:21.1.0
+
+    steps:
+    - uses: actions/checkout@v4.1.0
+
+    - name: restore_cache
+      uses: actions/cache@v3.3.2
+      with:
+        key: v1-dependencies-{{ checksum "package.json" }}
+        path: node_modules
+        restore-keys: |-
+          v1-dependencies-{{ checksum "package.json" }}
+          v1-dependencies-
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Test
+      run: npm run test
+
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4.0.1
+      with:
+        files: ./coverage/lcov.info
+
