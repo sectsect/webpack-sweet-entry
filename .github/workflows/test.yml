@@ -15,19 +15,20 @@ jobs:
     steps:
     - uses: actions/checkout@v4.1.0
 
-    - name: Use Node.js
-      uses: actions/setup-node@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
-        node-version: 21.1.0
+        # node-version: 21.1.0
+        node-version-file: 'package.json'
 
-    - name: restore_cache
-      uses: actions/cache@v3.3.2
+    - name: Restore Cache
+      id: cache-node-modules
+      uses: actions/cache@v4
       with:
-        key: v1-dependencies-{{ checksum "package.json" }}
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         path: node_modules
-        restore-keys: |-
-          v1-dependencies-{{ checksum "package.json" }}
-          v1-dependencies-
+        restore-keys: |
+          ${{ runner.os }}-node-
 
     - name: Install dependencies
       run: npm install
