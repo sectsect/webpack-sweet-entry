@@ -1,5 +1,18 @@
 # Changelog
 
+## [v7.0.4](https://github.com/sectsect/webpack-sweet-entry/tree/v7.0.4) (2024-09-22)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v7.0.3...v7.0.4)
+
+## [v7.0.3](https://github.com/sectsect/webpack-sweet-entry/tree/v7.0.3) (2024-06-15)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v7.0.2...v7.0.3)
+
+**Merged pull requests:**
+
+- ci: fix workflow [\#20](https://github.com/sectsect/webpack-sweet-entry/pull/20) ([sectsect](https://github.com/sectsect))
+- Migrate CI to GitHub Actions [\#19](https://github.com/sectsect/webpack-sweet-entry/pull/19) ([sectsect](https://github.com/sectsect))
+
 ## [v7.0.2](https://github.com/sectsect/webpack-sweet-entry/tree/v7.0.2) (2024-02-25)
 
 [Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v7.0.1...v7.0.2)
