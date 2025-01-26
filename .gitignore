@@ -17,6 +17,11 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+# Codecov uploader and integrity signatures
+codecov
+codecov.SHA256SUM
+codecov.SHA256SUM.sig
+
 # nyc test coverage
 .nyc_output
 
