@@ -1,5 +1,10 @@
 name: Test
 
+permissions:
+  contents: read
+  pull-requests: write
+  packages: write
+
 on:
   push:
     branches:
