@@ -16,7 +16,9 @@
     }
   },
   "scripts": {
-    "test": "jest --coverage",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
     "build": "tsup",
     "type-check": "tsc --noEmit --pretty",
     "type-check:watch": "npm run type-check -- --watch",
@@ -48,30 +50,29 @@
   "homepage": "https://github.com/sectsect/webpack-sweet-entry#readme",
   "browserslist": "> 1%, last 1 versions",
   "eslintIgnore": [
-    "/jest.config.js"
+    "/vitest.config.ts"
   ],
   "devDependencies": {
     "@spotify/tsconfig": "^15.0.0",
-    "@types/jest": "^29.5.14",
     "@types/node": "^24.0.0",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jest": "^27.9.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-tsdoc": "^0.2.17",
-    "jest": "^29.7.0",
     "prettier": "^3.5.3",
     "release-it": "^19.0.3",
-    "ts-jest": "^29.3.4",
     "tsup": "^8.5.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "fast-glob": "^3.3.3"

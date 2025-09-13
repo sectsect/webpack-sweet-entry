@@ -15,10 +15,9 @@ module.exports = {
     'airbnb',
     'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
-    'plugin:jest/recommended',
     'plugin:prettier/recommended',
   ],
-  plugins: ['@typescript-eslint', 'eslint-plugin-tsdoc', 'jest'],
+  plugins: ['@typescript-eslint', 'eslint-plugin-tsdoc'],
   ignorePatterns: ['__tests__'],
   rules: {
     'func-names': 0,

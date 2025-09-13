@@ -10,9 +10,9 @@
   "include": [
     "src/**/*",
     ".eslintrc.js",
-    "jest.config.js",
     "prettier.config.js",
-    "tsup.config.ts"
+    "tsup.config.ts",
+    "vitest.config.ts"
   ],
   "exclude": [
     "dist",
