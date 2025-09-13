@@ -65,11 +65,11 @@ describe('Dual Package Support', () => {
     it('should work with CommonJS require', async () => {
       const modulePath = path.join(distPath, 'index.js');
 
-      // Dynamic import to avoid TypeScript/ESM issues
-      const { createRequire } = await import('module');
-      const require = createRequire(import.meta.url);
+      // Use require directly in CommonJS environment
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      const req = require;
 
-      const { WebpackSweetEntry } = require(modulePath);
+      const { WebpackSweetEntry } = req(modulePath);
       expect(typeof WebpackSweetEntry).toBe('function');
 
       // Test basic functionality
@@ -99,10 +99,10 @@ describe('Dual Package Support', () => {
       const cjsPath = path.join(distPath, 'index.js');
       const esmPath = path.join(distPath, 'index.mjs');
 
-      // Import both versions
-      const { createRequire } = await import('module');
-      const require = createRequire(import.meta.url);
-      const { WebpackSweetEntry: cjsFunction } = require(cjsPath);
+      // Use require directly in CommonJS environment
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      const req = require;
+      const { WebpackSweetEntry: cjsFunction } = req(cjsPath);
       const { WebpackSweetEntry: esmFunction } = await import(`file://${esmPath}`);
 
       // Test with same inputs
