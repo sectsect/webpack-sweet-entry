@@ -74,7 +74,11 @@ describe('Dual Package Support', () => {
 
       // Test basic functionality
       const testPath = path.join(__dirname, 'files/single');
-      const result = WebpackSweetEntry(path.resolve(testPath, '**/*.js'), 'js', 'js');
+      const result = WebpackSweetEntry(
+        path.resolve(testPath, '**/*.js'),
+        'js',
+        'js',
+      );
       expect(typeof result).toBe('object');
       expect(Object.keys(result).length).toBeGreaterThan(0);
     });
@@ -90,7 +94,11 @@ describe('Dual Package Support', () => {
 
       // Test basic functionality
       const testPath = path.join(__dirname, 'files/single');
-      const result = WebpackSweetEntry(path.resolve(testPath, '**/*.js'), 'js', 'js');
+      const result = WebpackSweetEntry(
+        path.resolve(testPath, '**/*.js'),
+        'js',
+        'js',
+      );
       expect(typeof result).toBe('object');
       expect(Object.keys(result).length).toBeGreaterThan(0);
     });
@@ -103,7 +111,9 @@ describe('Dual Package Support', () => {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       const req = require;
       const { WebpackSweetEntry: cjsFunction } = req(cjsPath);
-      const { WebpackSweetEntry: esmFunction } = await import(`file://${esmPath}`);
+      const { WebpackSweetEntry: esmFunction } = await import(
+        `file://${esmPath}`
+      );
 
       // Test with same inputs
       const testPath = path.join(__dirname, 'files/single');

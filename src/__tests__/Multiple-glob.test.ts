@@ -1,6 +1,6 @@
 import * as path from 'path';
-import { WebpackSweetEntry } from '../index';
 import { describe, expect, it } from 'vitest';
+import { WebpackSweetEntry } from '../index';
 
 const tsPath = path.join(__dirname, 'files/single');
 const abPath = __dirname.replace('/webpack-sweet-entry/src/__tests__', '');
