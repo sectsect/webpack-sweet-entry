@@ -5,7 +5,8 @@
     "module": "commonjs",
     "noEmit": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "incremental": false
   },
   "include": [
     "src/**/*",

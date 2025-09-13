@@ -1,6 +1,7 @@
 import { defineConfig } from 'tsup';
 
-export const config = defineConfig({
+// eslint-disable-next-line import/no-default-export
+export default defineConfig({
   entry: ['src/index.ts'],
   format: ['cjs', 'esm'],
   dts: true,
