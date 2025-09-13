@@ -11,9 +11,12 @@ npm install --save-dev @sect/webpack-sweet-entry
 - Multiple entry points with glob pattern.
 - Partial files (Files and Directories named with a leading underscore `_` is ignored.).
 - Preserve directory structure in `dist` directory.
+- Dual Package Support (CommonJS and ES Modules).
 
 
 ## Usage Example
+
+### CommonJS
 ```js
 const webpack = require('webpack');
 const path = require('path');
@@ -44,6 +47,74 @@ module.exports = [
     }
   }
 ];
+```
+
+### ES Modules
+```js
+import webpack from 'webpack';
+import path from 'path';
+import { WebpackSweetEntry } from '@sect/webpack-sweet-entry';
+
+const sourcePath = path.join(process.cwd(), 'src');
+const buildPath = path.join(process.cwd(), 'dist');
+
+export default [
+  {
+    entry: WebpackSweetEntry(path.resolve(sourcePath, 'assets/js/**/*.js*'), 'js', 'js'),
+    output: {
+      path: path.resolve(buildPath, 'assets/js'),
+      filename: '[name].js',
+    },
+    module: {
+      ...
+    }
+  },
+  {
+    entry: WebpackSweetEntry(path.resolve(sourcePath, 'assets/css/**/*.css'), 'css', 'css'),
+    output: {
+      path: path.resolve(buildPath, 'assets/css'),
+      filename: '[name].css',
+    },
+    module: {
+      ...
+    }
+  }
+];
+```
+
+### TypeScript
+```ts
+import webpack from 'webpack';
+import path from 'path';
+import { WebpackSweetEntry } from '@sect/webpack-sweet-entry';
+
+const sourcePath: string = path.join(process.cwd(), 'src');
+const buildPath: string = path.join(process.cwd(), 'dist');
+
+const config: webpack.Configuration[] = [
+  {
+    entry: WebpackSweetEntry(path.resolve(sourcePath, 'assets/js/**/*.js*'), 'js', 'js'),
+    output: {
+      path: path.resolve(buildPath, 'assets/js'),
+      filename: '[name].js',
+    },
+    module: {
+      ...
+    }
+  },
+  {
+    entry: WebpackSweetEntry(path.resolve(sourcePath, 'assets/css/**/*.css'), 'css', 'css'),
+    output: {
+      path: path.resolve(buildPath, 'assets/css'),
+      filename: '[name].css',
+    },
+    module: {
+      ...
+    }
+  }
+];
+
+export default config;
 ```
 
 ### Multiple(Mixed) extentions
