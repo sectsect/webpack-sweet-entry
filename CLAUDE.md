@@ -4,14 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is `@sect/webpack-sweet-entry`, a npm package that creates Webpack entry points using glob patterns while automatically excluding files/directories prefixed with underscores and preserving directory structure.
+This is `@sect/webpack-sweet-entry`, a npm package that creates Webpack entry points using glob patterns while automatically excluding files/directories prefixed with underscores and preserving directory structure. The package supports dual distribution (CommonJS and ESModule) and requires Node.js 20+.
 
 ## Core Commands
 
-- `npm test` - Run Jest tests with coverage
-- `npm run build` - Compile TypeScript to dist/
+- `npm test` - Run Vitest tests with coverage
+- `npm run test:watch` - Run Vitest in watch mode for development
+- `npm run test:ui` - Run Vitest with interactive UI
+- `npm run build` - Build with tsup to create dual package (CJS + ESM) in dist/
 - `npm run type-check` - Run TypeScript type checking without emitting files
-- `npm run lint` - Run ESLint on src/ directory
+- `npm run type-check:watch` - Run TypeScript type checking in watch mode
+- `npm run lint` - Run ESLint on src/ and src/__tests__/ directories
 - `npm run lint:fix` - Run ESLint with auto-fix
 - `npm run format` - Format code with Prettier
 
@@ -29,17 +32,24 @@ The main export is `WebpackSweetEntry(paths, ext, parentdir)` in `src/index.ts` 
 - **Directory preservation**: Input structure `src/js/components/modal.js` becomes entry key `components/modal`
 - **Multi-extension support**: Can handle single extensions (`'js'`) or arrays (`['ts', 'js']`)
 
+### Build System
+- **tsup**: Builds dual package with CommonJS and ESModule exports
+- **Target**: Node.js 20+ with ES2023 features
+- **Output**: `dist/index.js` (CJS), `dist/index.mjs` (ESM), `dist/index.d.ts` (types)
+
 ## Testing
 
-- Uses Jest with ts-jest preset
-- Test files located in `src/__tests__/`
-- Test fixtures in `src/__tests__/files/` (ignored by Jest via testPathIgnorePatterns)
+- Uses Vitest with v8 coverage provider
+- Test files: `src/**/*.test.ts` pattern
+- Test fixtures: `src/__tests__/files/` (excluded from test execution)
+- Coverage includes all `src/**` files except tests, configs, and type definitions
 - Tests cover single/multiple extensions, glob patterns, and underscore file exclusion
 
 ## Code Standards
 
-- TypeScript with ES2022 target, CommonJS output
+- TypeScript with ES2023 target, dual CommonJS/ESModule output
 - ESLint with Airbnb + TypeScript configuration
-- Named exports only (no default exports per ESLint rule)
+- Named exports only (no default exports per ESLint rule, except tsup.config.ts)
 - TSDoc comments for functions
 - Prettier formatting enforced
+- Spotify TypeScript configuration as base
