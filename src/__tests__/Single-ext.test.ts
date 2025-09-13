@@ -10,8 +10,8 @@ const obj = Object.assign(
   ...Object.keys(wse).map(k => ({ [k]: wse[k].replace(abPath, '') })),
 );
 
-describe('Test', () => {
-  it('toEqual()', () => {
+describe('WebpackSweetEntry with single extension', () => {
+  it('should generate entry points filtering by single extension', () => {
     expect(obj).toEqual({
       a: '/webpack-sweet-entry/src/__tests__/files/single/js/a.js',
       b: '/webpack-sweet-entry/src/__tests__/files/single/js/b.js',

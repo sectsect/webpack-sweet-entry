@@ -14,8 +14,8 @@ const obj = Object.assign(
   ...Object.keys(wse).map(k => ({ [k]: wse[k].replace(abPath, '') })),
 );
 
-describe('Test', () => {
-  it('toEqual()', () => {
+describe('WebpackSweetEntry with multiple glob patterns', () => {
+  it('should exclude files matching negation pattern (!**/a.js)', () => {
     expect(obj).toEqual({
       b: '/webpack-sweet-entry/src/__tests__/files/single/js/b.js',
       c: '/webpack-sweet-entry/src/__tests__/files/single/js/c.js',
