@@ -6,10 +6,18 @@
     "node": ">=20.0.0"
   },
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
     "test": "jest --coverage",
-    "build": "tsc",
+    "build": "tsup",
     "type-check": "tsc --noEmit --pretty",
     "type-check:watch": "npm run type-check -- --watch",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
@@ -62,6 +70,7 @@
     "prettier": "^3.5.3",
     "release-it": "^19.0.3",
     "ts-jest": "^29.3.4",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {
