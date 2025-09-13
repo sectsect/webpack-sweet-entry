@@ -1,7 +1,7 @@
 # @sect/webpack-sweet-entry
-[![Test](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/test.yml/badge.svg)](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/sectsect/webpack-sweet-entry/branch/master/graph/badge.svg?token=0EKNBV7VK1)](https://codecov.io/gh/sectsect/webpack-sweet-entry) [![CodeQL](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/github-code-scanning/codeql) [![npm version](https://badge.fury.io/js/%40sect%2Fwebpack-sweet-entry.svg)](https://badge.fury.io/js/%40sect%2Fwebpack-sweet-entry) [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![Test](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/test.yml/badge.svg)](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/sectsect/webpack-sweet-entry/branch/master/graph/badge.svg?token=0EKNBV7VK1)](https://codecov.io/gh/sectsect/webpack-sweet-entry) [![CodeQL](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/github-code-scanning/codeql)
 
-Multiple entry points with glob pattern / Partial files with underscore / Preserve directory structure 
+Multiple entry points with glob pattern / Ignore files and directories with leading underscore `_` / Preserve directory structure 
 
 ## Install
 ```
@@ -9,7 +9,7 @@ npm install --save-dev @sect/webpack-sweet-entry
 ```
 ## Features
 - Multiple entry points with glob pattern.
-- Partial files (Files and Directories named with a leading underscore `_` is ignored.).
+- Ignore files and directories with leading underscore `_`.
 - Preserve directory structure in `dist` directory.
 - Dual Package Support (CommonJS and ES Modules).
 
@@ -53,10 +53,15 @@ module.exports = [
 ```js
 import webpack from 'webpack';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import { WebpackSweetEntry } from '@sect/webpack-sweet-entry';
 
-const sourcePath = path.join(process.cwd(), 'src');
-const buildPath = path.join(process.cwd(), 'dist');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const sourcePath = path.join(__dirname, 'src');
+const buildPath = path.join(__dirname, 'dist');
 
 export default [
   {
@@ -86,10 +91,15 @@ export default [
 ```ts
 import webpack from 'webpack';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import { WebpackSweetEntry } from '@sect/webpack-sweet-entry';
 
-const sourcePath: string = path.join(process.cwd(), 'src');
-const buildPath: string = path.join(process.cwd(), 'dist');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const sourcePath = path.join(__dirname, 'src');
+const buildPath = path.join(__dirname, 'dist');
 
 const config: webpack.Configuration[] = [
   {
@@ -117,14 +127,13 @@ const config: webpack.Configuration[] = [
 export default config;
 ```
 
-### Multiple(Mixed) extentions
-```js
-module.exports = [
+### Multiple(Mixed) extensions
+```ts
+const config: webpack.Configuration[] = [
   {
     entry: WebpackSweetEntry(path.resolve(sourcePath, 'assets/scripts/**/*.*s*'), ['ts', 'js'], 'scripts'),
     output: {
-      path: path.resolve(buildPath, 'assets/js'),
-      filename: '[name].js',
+      ...
     },
     module: {
       ...
@@ -199,7 +208,6 @@ Returns `object` like the following.
 │               └── _f.js
 ├── package-lock.json
 ├── package.json
-├── postcss.config.js
 └── webpack.config.js
 ```
 
