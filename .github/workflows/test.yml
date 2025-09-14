@@ -23,7 +23,6 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        # node-version: 21.1.0
         node-version-file: 'package.json'
 
     - name: Restore Cache
@@ -32,14 +31,18 @@ jobs:
       with:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         path: node_modules
-        restore-keys: |
-          ${{ runner.os }}-node-
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
 
     - name: Build Packages
       run: npm run build
+
+    - name: Type Check
+      run: npm run type-check
+
+    - name: Lint
+      run: npm run lint
 
     - name: Run Tests
       run: npm run test
