@@ -64,3 +64,5 @@ typings/
 
 .DS_Store
 /dist
+
+tsconfig.tsbuildinfo

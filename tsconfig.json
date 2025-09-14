@@ -1,28 +1,24 @@
 {
   "extends": "@spotify/tsconfig",
-  // "include": ["src"],
-  // "exclude": ["node_modules", "**/__tests__/*"],
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "ES2023",
     "module": "commonjs",
-    "declaration": true,
-    "outDir": "./dist",
-    "isolatedModules": false,
-    "noEmit": false,
-    "noImplicitThis": false,
-    "sourceMap": true,
-    "esModuleInterop": true
+    "noEmit": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "incremental": false
   },
   "include": [
     "src/**/*",
     ".eslintrc.js",
-    "jest.config.js",
     "prettier.config.js",
+    "tsup.config.ts",
+    "vitest.config.ts"
   ],
   "exclude": [
     "dist",
     "node_modules",
-    "**/*.spec.ts",
-    "**/__tests__/*"
+    // "**/*.spec.ts",
+    // "**/__tests__/*"
   ]
 }

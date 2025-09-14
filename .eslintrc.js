@@ -15,11 +15,9 @@ module.exports = {
     'airbnb',
     'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
-    'plugin:jest/recommended',
     'plugin:prettier/recommended',
   ],
-  plugins: ['@typescript-eslint', 'eslint-plugin-tsdoc', 'jest'],
-  ignorePatterns: ['__tests__'],
+  plugins: ['@typescript-eslint', 'eslint-plugin-tsdoc', '@vitest'],
   rules: {
     'func-names': 0,
     'import/extensions': 0,
@@ -83,4 +81,37 @@ module.exports = {
     //   }
     // }
   },
+  overrides: [
+    {
+      files: ['src/**/*.test.ts', 'src/**/*.spec.ts'],
+      plugins: ['@vitest'],
+      rules: {
+        '@vitest/consistent-test-it': 'error',
+        '@vitest/no-conditional-expect': 'error',
+        '@vitest/no-conditional-in-test': 'error',
+        '@vitest/no-conditional-tests': 'error',
+        '@vitest/no-disabled-tests': 'warn',
+        '@vitest/no-focused-tests': 'error',
+        '@vitest/prefer-to-be': 'error',
+        '@vitest/prefer-to-contain': 'error',
+        '@vitest/prefer-to-have-length': 'error',
+        '@vitest/valid-describe-callback': 'error',
+        '@vitest/valid-expect': 'error',
+      },
+      env: {
+        node: true,
+      },
+      globals: {
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        test: 'readonly',
+      },
+    },
+  ],
 };

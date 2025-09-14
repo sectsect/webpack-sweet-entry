@@ -1,4 +1,5 @@
 import * as path from 'path';
+import { describe, expect, it } from 'vitest';
 import { WebpackSweetEntry } from '../index';
 
 const tsPath = path.join(__dirname, 'files/single');
@@ -13,8 +14,8 @@ const obj = Object.assign(
   ...Object.keys(wse).map(k => ({ [k]: wse[k].replace(abPath, '') })),
 );
 
-describe('Test', () => {
-  it('toEqual()', () => {
+describe('WebpackSweetEntry without extension parameter', () => {
+  it('should generate entry points without filtering by extension', () => {
     expect(obj).toEqual({
       a: '/webpack-sweet-entry/src/__tests__/files/single/js/a.js',
       b: '/webpack-sweet-entry/src/__tests__/files/single/js/b.js',
