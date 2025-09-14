@@ -1,5 +1,15 @@
 # Changelog
 
+## [v8.0.0](https://github.com/sectsect/webpack-sweet-entry/tree/v8.0.0) (2025-09-14)
+
+[Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v7.0.6...v8.0.0)
+
+**Merged pull requests:**
+
+- feat\(build\): add dual package support with tsup [\#23](https://github.com/sectsect/webpack-sweet-entry/pull/23) ([sectsect](https://github.com/sectsect))
+- Potential fix for code scanning alert no. 1: Workflow does not contain permissions [\#22](https://github.com/sectsect/webpack-sweet-entry/pull/22) ([sectsect](https://github.com/sectsect))
+- ci: migrate CodeQL to default setup [\#21](https://github.com/sectsect/webpack-sweet-entry/pull/21) ([sectsect](https://github.com/sectsect))
+
 ## [v7.0.6](https://github.com/sectsect/webpack-sweet-entry/tree/v7.0.6) (2025-06-10)
 
 [Full Changelog](https://github.com/sectsect/webpack-sweet-entry/compare/v7.0.5...v7.0.6)
