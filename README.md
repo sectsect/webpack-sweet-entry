@@ -1,5 +1,5 @@
 # @sect/webpack-sweet-entry
-[![Test](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/test.yml/badge.svg)](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/sectsect/webpack-sweet-entry/branch/master/graph/badge.svg?token=0EKNBV7VK1)](https://codecov.io/gh/sectsect/webpack-sweet-entry) [![CodeQL](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/github-code-scanning/codeql)
+[![Release](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/release.yml/badge.svg)](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/release.yml) [![codecov](https://codecov.io/gh/sectsect/webpack-sweet-entry/branch/master/graph/badge.svg?token=0EKNBV7VK1)](https://codecov.io/gh/sectsect/webpack-sweet-entry) [![CodeQL](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/sectsect/webpack-sweet-entry/actions/workflows/github-code-scanning/codeql)
 
 Multiple entry points with glob pattern / Ignore files and directories with leading underscore `_` / Preserve directory structure 
 
@@ -222,7 +222,50 @@ $ npm install --save-dev @sect/webpack-sweet-entry
 + const { WebpackSweetEntry } = require('@sect/webpack-sweet-entry');
 ```
 
-## Changelog 
+## Development
+
+### Making Changes
+
+When you make a change that should be included in the next release:
+
+1. Create a feature branch
+2. Make your changes
+3. Add a changeset: `npm run changeset`
+   - Select the type of change (patch/minor/major)
+   - Provide a description of the change
+4. Commit the changeset file along with your changes
+5. Create a pull request
+
+### Release Process
+
+This project uses [changesets](https://github.com/changesets/changesets) for version management and releases.
+
+**Automated Release Workflow:**
+1. When a PR with changesets is merged to master, a "Version Packages" PR is automatically created
+2. The Version Packages PR includes:
+   - Updated version numbers in package.json
+   - Updated CHANGELOG.md
+   - Removed changeset files
+3. When the Version Packages PR is merged:
+   - The package is automatically built
+   - Published to npm with provenance
+   - A GitHub release is created
+
+**Manual Testing:**
+```bash
+# Create a test changeset
+npm run changeset
+
+# Preview version bump (without publishing)
+npm run version-packages
+
+# Build and test before release
+npm run build
+npm test
+npm run lint
+```
+
+## Changelog
 
 See [CHANGELOG](https://github.com/sectsect/webpack-sweet-entry/blob/master/CHANGELOG.md) file.
 
